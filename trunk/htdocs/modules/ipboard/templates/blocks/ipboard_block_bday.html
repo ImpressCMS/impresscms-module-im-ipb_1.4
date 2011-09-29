@@ -1,0 +1,23 @@
+<table cellspacing="1" class="outer">
+	<{if $block.no_bday }>
+		<tr class="<{cycle values="even,odd"}>" valign="middle">
+			<td><{$block.lang_no_bday}></td>
+		</tr>
+	<{else}>	
+	<tr>
+		<th align="center"><{$block.lang_mem}>
+		<th align="center"><{$block.lang_ages}>
+	</tr>
+	  <{foreach item=bday from=$block.bday}>
+	  <tr class="<{cycle values="even,odd"}>" valign="middle">
+	    <td align="center">
+	      <{if $block.avatar}>
+	      <img src="<{$bday.avatar}>" alt="<{$bday.name}>" width="32" /><br />
+	      <{/if}>
+	      <a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$bday.user_link}>"><{$bday.name}></a>
+	    </td>
+	    <td align="center"><{$bday.ages}></td>
+	  </tr>
+	  <{/foreach}>
+  <{/if}>
+</table>

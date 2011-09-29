@@ -1,0 +1,106 @@
+<table class="outer" cellspacing="1">
+
+<{if $block.full_view == true}>
+  <tr>
+    <th>
+      <table border="0" width="100%" cellspacing="0" cellpadding="4">
+        <tr><td align="left">&nbsp;<{$block.lang_welcome}></tr></td>
+      </table>
+    </th>
+    <th align="right" width="4%"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$block.user_link}>"><{if $block.is_avatar}><img src=<{$block.avatar}>><{/if}></a></th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td colspan="2" width="50%" class="even" align="left"><{$block.lang_now}></td>
+    <td class="even" valign='middle' align="left"><{$block.lang_lastvisit}> </td>    
+  </tr>
+
+  <tr> 
+    <td colspan="3" class="even" align='center'><{$block.lang_sum}></td>
+  </tr> 
+   
+  <tr> 
+    <td colspan="2" class="even"  align="left"><{$block.lang_new_user}>&nbsp;<a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.nuser_link}>><{$block.lang_new_uname}></a></td>
+    <td class="even" valign='middle' align="left"><a target="_blank" href=<{$block.vposts_link}>><{$block.lang_view_posts}></a>&nbsp;::&nbsp;<a target="_blank" href=<{$block.vtopics_link}>><{$block.lang_view_topics}></a></td>      
+  </tr>  
+
+  <tr> 
+    <td colspan="2" class="even" align="left">
+      <table border="0" width="100%" cellspacing="0" cellpadding="4">
+        <tr>
+          <td width="50%"><{$block.lang_top_topic}>&nbsp;</td>
+          <td width="50%"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.top_topic_id_link}>><{$block.lang_top_topic_uname}></a>&nbsp;[<{$block.top_topic}>]</td>
+        </tr>
+        <tr>
+          <td><{$block.lang_top_post}>&nbsp;</td>
+          <td><a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.top_post_id_link}>><{$block.lang_top_post_uname}></a>&nbsp;[<{$block.top_post}>]</td>
+        </tr>
+      </table>
+    </td>
+    
+    <td class="even" valign='middle' align="left">  
+      <table border="0" width="100%" cellspacing="0" cellpadding="4">
+        <tr>
+          <td width="50%"><{$block.lang_users}><br><{$block.lang_topics}></td>
+          <td width="50%"><{$block.lang_replies}><br /><{$block.lang_posts}></td>
+        </tr>         
+      </table>    
+    </td>    
+  </tr>  
+
+  <tr> 
+    <td colspan="2" class="even" align="left"></td>
+    <td class="even" valign='middle' align="left"></td>      
+  </tr>  
+
+  <tr> 
+    <td colspan="3" class="even" align="center"><{$block.lang_most_online}></td>
+  </tr>  
+
+  <tr> 
+    <td class="foot" align="right" colspan="3"><a target="_blank" href="http://www.bbpixel.com">::BBpixel::</a></td>
+  </tr>
+
+  <{else}>
+  <tr>
+    <th>
+      <table border="0" width="100%" valign="middle" cellspacing="0" cellpadding="4">
+        <tr><td align="left"><font size="1">&nbsp;<{$block.lang_welcome}><font></td></tr>
+      </table>
+    </th>
+    <th align="right" width="4%"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$block.user_link}>"><{if $block.is_avatar}><img width="32" src=<{$block.avatar}>><{/if}></a></th>
+  </tr>
+
+  <tr>
+    <td colspan="2" width="50%" class="even" valign='middle' align="left">
+    .:<font size="1"><b><{$block.lang_now}><br>
+    .:<{$block.lang_lastvisit}></b></font><br>
+    .:<{$block.lang_new_topics}>&nbsp;[<a target="_blank" href=<{$block.vtopics_link}>><{$block.new_topics}></a>]&nbsp;<br>
+    .:<{$block.lang_new_posts}>&nbsp;[<a target="_blank" href=<{$block.vposts_link}>><{$block.new_posts}></a>]&nbsp;<br>
+    </td>
+  </tr>
+
+   <tr>
+    <td colspan="2" class="even" valign='middle' align="left">
+    .:.&nbsp;<{$block.lang_users}><br>
+    .:.&nbsp;<{$block.lang_topics}><br>
+    .:.&nbsp;<{$block.lang_replies}><br>
+    .:.&nbsp;<{$block.lang_posts}><br>
+    </td>    
+ </tr>
+
+  <tr>
+    <td colspan="2" class="even" valign='middle' align="left">
+    .:<{$block.lang_new_user}>&nbsp;<div align="center"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.nuser_link}>><{$block.lang_new_uname}></a></div>
+    .:<{$block.lang_top_topic}>&nbsp;<div align="center"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.top_topic_id_link}>><{$block.lang_top_topic_uname}></a>&nbsp;[<{$block.top_topic}>]</div>
+    .:<{$block.lang_top_post}>&nbsp;<div align="center"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href=<{$block.top_post_id_link}>><{$block.lang_top_post_uname}></a>&nbsp;[<{$block.top_post}>]</div>
+    </td>    
+ </tr>
+
+  <tr> 
+    <td class="foot" align="right" colspan="3"><a target="_blank" href="http://www.bbpixel.com">::BBpixel::</a></td>
+  </tr>
+  <{/if}>
+
+</table>

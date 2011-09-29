@@ -1,0 +1,25 @@
+//--------------------------------------
+// X-IPB Module 
+// IPB version: 1.3.1 Final
+// XOOPS version: 2.0.15
+// Module version: 1.4J
+// Update: 20-Sep-2006
+//--------------------------------------
+
+########----------------------UPGRADE INSTRUCTION-----------------########
+
+1. Update your site to newest version of XOOPS. (Download from www.XOOPS.org)
+
+2. Copy overwritten "All Files/Folders" (except "uploads", "modules/ipboard" folders because We only need update XOOPS core files) inside "upload" folder of this Package into "yoursite.com/xoops_path/"
+
+3. Update with these addition files 
+"/modules/ipboard/index.php" 
+"/modules/ipboard/sources/misc/*.*" << all files
+"/modules/ipboard/xoops_version.php"
+
+4. Finish.
+
+===========================================================================
+
+DO NOT OVERWRITE conf_global.php inside the 'modules/ipboard' folder if you are upgrading, only overwrite the files/folders mentioned above.
+

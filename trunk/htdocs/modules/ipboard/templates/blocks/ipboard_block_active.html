@@ -1,0 +1,43 @@
+<table class="outer" cellspacing="1" width="100%">
+  <{if $block.full_view == true}>
+  <tr>
+    <th></th>
+    <th><{$block.lang_topic}></th>
+    <th align="center"><{$block.lang_replies}></th>
+    <th align="center"><{$block.lang_views}></th>
+    <th align="right"><{$block.lang_lastpost}></th>
+  </tr>
+  <{foreach item=topic from=$block.topics}>
+	  <tr>
+	    <td class="even" width="6%"  align="center"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_forum}>"><{$topic.img_smile}></a></td>
+	    <td class="odd"  width="50%" onmouseout='this.className="odd";'  onmouseover='this.className="even";'><div class="bb_topic"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_topic}>"><{$topic.title}></a> <{$topic.pages}></div><div align=right class="bb_forum"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_forum}>"><{$topic.forum_name}></a></div></td>
+	    <td class="even" width="12%" onmouseout='this.className="even";' onmouseover='this.className="odd";' align="center"><{$topic.replies}></td>
+	    <td class="odd"  width="12%" onmouseout='this.className="odd";'  onmouseover='this.className="even";' align="center"><{$topic.views}></td>
+	    <td class="even" width="20%" onmouseout='this.className="even";' onmouseover='this.className="odd";'  align="right" nowrap><div class="bb_author"><{$topic.time}><br><{if $topic.last_post_id <> 0}><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_user}>"><{$block.lang_by}>:&nbsp;<{$topic.last_post_name}></a><{else}><{$block.lang_by}>:&nbsp;<{$topic.last_post_name}><{/if}></div></td>
+	 </tr>
+  <{/foreach}>
+  <tr>
+    <td class="foot" align="left" colspan="2"><a target="_blank" href="http://www.bbpixel.com">::BBpixel::</a></td>
+    <td class="foot" align="right" colspan="3"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$xoops_url}>/modules/ipboard/"><{$block.lang_visitforums}></a></td>
+  </tr>
+  <{else}>
+  <tr>
+    <td class="head"></td>
+    <td class="head"><{$block.lang_topic}></td>
+    <td class="head" align="center"><{$block.lang_replies}></td>
+    <td class="head" align="right"><{$block.lang_lastpost}></td>
+  </tr>
+   <{foreach item=topic from=$block.topics}>
+	  <tr class="even" onmouseout='this.className="even";' onmouseover='this.className="odd";' >
+	    <td width="6%" align="center"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_forum}>"><{$topic.img_smile}></a></td>
+	    <td><div class="bb_topic"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_topic}>"><{$topic.title}></a> <{$topic.pages}></div><div align=right class="bb_forum"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_forum}>"><{$topic.forum_name}></a></div></td>
+	    <td align="center"><{$topic.replies}></td>
+	    <td align="right"><div class="bb_author"><{$topic.time}><br><{if $topic.last_post_id <> 0}><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$topic.link_user}>"><{$block.lang_by}>:&nbsp;<{$topic.last_post_name}></a><{else}><{$block.lang_by}>:&nbsp;<{$topic.last_post_name}><{/if}></div></td>
+	 </tr>
+  <{/foreach}>
+  <tr>
+    <td class="foot" align="left" colspan="2"><a target="_blank" href="http://www.bbpixel.com">::BBpixel::</a></td>
+    <td class="foot" align="right" colspan="2"><a <{if $block.view_popup == true}>target="_blank"<{/if}> href="<{$xoops_url}>/modules/ipboard/"><{$block.lang_visitforums}></a></td>
+  </tr>
+  <{/if}>
+</table>
